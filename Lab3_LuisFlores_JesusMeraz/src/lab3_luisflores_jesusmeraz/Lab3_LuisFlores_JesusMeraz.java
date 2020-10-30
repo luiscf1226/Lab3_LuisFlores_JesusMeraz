@@ -153,24 +153,24 @@ public class Lab3_LuisFlores_JesusMeraz {
                                     if (oo == 1) {
                                         System.out.println("TIENDAS!!!!");
                                         String salida33 = "";
-                                        for (Object t : tiendas) {
-                                            salida33 += "" + tiendas.indexOf(t) + "- " + t + "\n";
+                                        for (Object t2 : tiendas) {
+                                            salida33 += "" + tiendas.indexOf(t2) + "- " + t2 + "\n";
                                         }
                                         System.out.println(salida33);
                                     }
                                     if (oo == 2) {
                                         System.out.println("QUISCOS!!!!");
                                         String salida55 = "";
-                                        for (Object t : quisco) {
-                                            salida55 += "" + quisco.indexOf(t) + "- " + t + "\n";
+                                        for (Object t3 : quisco) {
+                                            salida55 += "" + quisco.indexOf(t3) + "- " + t3 + "\n";
                                         }
                                         System.out.println(salida55);
                                     }
                                     if (oo == 3) {
                                         System.out.println("RESTAURANTES!!!!");
                                         String salida565 = "";
-                                        for (Object t : restaurantes) {
-                                            salida565 += "" + restaurantes.indexOf(t) + "- " + t + "\n";
+                                        for (Object t4 : restaurantes) {
+                                            salida565 += "" + restaurantes.indexOf(t4) + "- " + t4 + "\n";
                                         }
                                         System.out.println(salida565);
                                     }
@@ -178,8 +178,8 @@ public class Lab3_LuisFlores_JesusMeraz {
                                 case 5:
                                     System.out.println("PERSONAS!!!!");
                                     String salida2 = "";
-                                    for (Object t : personas) {
-                                        salida2 += "" + personas.indexOf(t) + "- " + t + "\n";
+                                    for (Object t5 : personas) {
+                                        salida2 += "" + personas.indexOf(t5) + "- " + t5 + "\n";
                                     }
                                     System.out.println(salida2);
                                     System.out.println("");
@@ -192,16 +192,16 @@ public class Lab3_LuisFlores_JesusMeraz {
                                     if (oo1 == 1) {
                                         System.out.println("EMPLEADOS!!!!");
                                         String salida23 = "";
-                                        for (Object t : empleados) {
-                                            salida23 += "" + empleados.indexOf(t) + "- " + t + "\n";
+                                        for (Object t6 : empleados) {
+                                            salida23 += "" + empleados.indexOf(t6) + "- " + t6 + "\n";
                                         }
                                         System.out.println(salida23);
                                     }
                                     if (oo1 == 2) {
                                         System.out.println("CLIENTES!!!!");
                                         String salida233 = "";
-                                        for (Object t : clientes) {
-                                            salida233 += "" + clientes.indexOf(t) + "- " + t + "\n";
+                                        for (Object t6 : clientes) {
+                                            salida233 += "" + clientes.indexOf(t6) + "- " + t6 + "\n";
                                         }
                                         System.out.println(salida233);
                                     }
@@ -209,8 +209,8 @@ public class Lab3_LuisFlores_JesusMeraz {
                                 case 6:
                                     System.out.println("PRODUCTOS!!!!");
                                     String salida3 = "";
-                                    for (Object t : productos) {
-                                        salida3 += "" + productos.indexOf(t) + "- " + t + "\n";
+                                    for (Object t7 : productos) {
+                                        salida3 += "" + productos.indexOf(t7) + "- " + t7 + "\n";
                                     }
                                     System.out.println(salida3);
                                     System.out.println("");
@@ -224,24 +224,24 @@ public class Lab3_LuisFlores_JesusMeraz {
                                     if (oo2 == 1) {
                                         System.out.println("ROPA!!!!");
                                         String salida9 = "";
-                                        for (Object t : ropa) {
-                                            salida9 += "" + ropa.indexOf(t) + "- " + t + "\n";
+                                        for (Object t8 : ropa) {
+                                            salida9 += "" + ropa.indexOf(t8) + "- " + t8 + "\n";
                                         }
                                         System.out.println(salida9);
                                     }
                                     if (oo2 == 2) {
                                         System.out.println("JUGUETES!!!!");
                                         String salida99 = "";
-                                        for (Object t : juguetes) {
-                                            salida99 += "" + juguetes.indexOf(t) + "- " + t + "\n";
+                                        for (Object t9 : juguetes) {
+                                            salida99 += "" + juguetes.indexOf(t9) + "- " + t9 + "\n";
                                         }
                                         System.out.println(salida99);
                                     }
                                     if (oo2 == 3) {
                                         System.out.println("COMIDA!!!!");
                                         String salida999 = "";
-                                        for (Object t : comida) {
-                                            salida999 += "" + comida.indexOf(t) + "- " + t + "\n";
+                                        for (Object t11 : comida) {
+                                            salida999 += "" + comida.indexOf(t11) + "- " + t11 + "\n";
                                         }
                                         System.out.println(salida999);
                                     }
@@ -895,7 +895,7 @@ public class Lab3_LuisFlores_JesusMeraz {
         do {
             System.out.println("->Ingrese posicion a eliminar: ");
             indice = sc.nextInt();
-        } while (indice < 0 || indice >= locales.size());
+        } while (indice < 0 || indice >= personas.size());
 
         locales.remove(indice);
 
@@ -915,7 +915,7 @@ public class Lab3_LuisFlores_JesusMeraz {
         do{
             System.out.println("->Ingrese posicion a eliminar: ");
             indice = sc.nextInt();
-        }while(indice < 0 || indice >= locales.size());
+        }while(indice < 0 || indice >= productos.size());
         
         productos.remove(indice);
 
