@@ -17,6 +17,12 @@ public class Empleados extends Personas {
         super();
     }
 
+    public Empleados(String horario, int productos, int id, String username, String contra, String correo, String nombre) {
+        super(id, username, contra, correo, nombre);
+        this.horario = horario;
+        this.productos = productos;
+    }
+
     public Empleados(String horario, int productos) {
         this.horario = horario;
         this.productos = productos;

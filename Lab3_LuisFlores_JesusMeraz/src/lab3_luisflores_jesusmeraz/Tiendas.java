@@ -12,17 +12,17 @@ package lab3_luisflores_jesusmeraz;
 public class Tiendas extends Locales {
     Ropa ropa;
     Juguetes juguetes;
-    Comida comida;
+    
 
     public Tiendas() {
         super();
     }
 
-    public Tiendas(Ropa ropa, Juguetes juguetes, Comida comida, String nombre, String gerente) {
+    public Tiendas(Ropa ropa, Juguetes juguetes,  String nombre, String gerente) {
         super(nombre, gerente);
         this.ropa = ropa;
         this.juguetes = juguetes;
-        this.comida = comida;
+        
     }
 
     public Ropa getRopa() {
@@ -41,18 +41,13 @@ public class Tiendas extends Locales {
         this.juguetes = juguetes;
     }
 
-    public Comida getComida() {
-        return comida;
-    }
-
-    public void setComida(Comida comida) {
-        this.comida = comida;
-    }
-
     @Override
     public String toString() {
-        return super.toString()+"Tiendas{" + "ropa=" + ropa + ", juguetes=" + juguetes + ", comida=" + comida + '}';
+        return super.toString()+"Tiendas{" + "ropa=" + ropa + ", juguetes=" + juguetes + '}';
     }
+
+    
+
     
     
 }
