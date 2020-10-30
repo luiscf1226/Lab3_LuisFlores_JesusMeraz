@@ -239,6 +239,17 @@ public class Lab3_LuisFlores_JesusMeraz {
                         }
                     }
                 case 2:
+                    System.out.println("ciente = ");
+                    System.out.println("Ingrese Usuario: ");
+                    String cliente = leer.next();
+                    System.out.println("Ingrese password: ");
+                    String pass2 = leer.next();
+                    if (cliente.equals("SUDO") && pass2.equals("clau123")) {
+                        signedInAdmin = true;
+                        System.out.println("Bienvenido SUDO");
+                    } else {
+                        System.out.println("Incorrecto");
+                    }
                     System.out.println("Bienvenido Usuario");
                     break;
             }// LOGIN JESUS USUARIO
