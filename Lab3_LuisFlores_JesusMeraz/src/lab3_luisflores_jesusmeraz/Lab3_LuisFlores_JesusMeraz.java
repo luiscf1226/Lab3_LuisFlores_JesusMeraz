@@ -144,6 +144,36 @@ public class Lab3_LuisFlores_JesusMeraz {
                                         salida += "" + locales.indexOf(t) + "- " + t + "\n";
                                     }
                                     System.out.println(salida);
+                                    System.out.println("Escoja Listado por Separado: ");
+                                    System.out.println("1.  Tienda");
+                                    System.out.println("2.  Quisco");
+                                    System.out.println("3.  Restaurante");
+                                    System.out.println("Escoja Opcion: ");
+                                    int oo = leer.nextInt();
+                                    if (oo == 1) {
+                                        System.out.println("TIENDAS!!!!");
+                                        String salida33 = "";
+                                        for (Object t : tiendas) {
+                                            salida33 += "" + tiendas.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida33);
+                                    }
+                                    if (oo == 2) {
+                                        System.out.println("QUISCOS!!!!");
+                                        String salida55 = "";
+                                        for (Object t : quisco) {
+                                            salida55 += "" + quisco.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida55);
+                                    }
+                                    if (oo == 3) {
+                                        System.out.println("RESTAURANTES!!!!");
+                                        String salida565 = "";
+                                        for (Object t : restaurantes) {
+                                            salida565 += "" + restaurantes.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida565);
+                                    }
                                     break;
                                 case 5:
                                     System.out.println("PERSONAS!!!!");
@@ -152,7 +182,29 @@ public class Lab3_LuisFlores_JesusMeraz {
                                         salida2 += "" + personas.indexOf(t) + "- " + t + "\n";
                                     }
                                     System.out.println(salida2);
+                                    System.out.println("");
+                                    System.out.println("Escoja Listado por Separado: ");
+                                    System.out.println("1.  Empleados");
+                                    System.out.println("2.  Clientes");
 
+                                    System.out.println("Escoja Opcion: ");
+                                    int oo1 = leer.nextInt();
+                                    if (oo1 == 1) {
+                                        System.out.println("EMPLEADOS!!!!");
+                                        String salida23 = "";
+                                        for (Object t : empleados) {
+                                            salida23 += "" + empleados.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida23);
+                                    }
+                                    if (oo1 == 2) {
+                                        System.out.println("CLIENTES!!!!");
+                                        String salida233 = "";
+                                        for (Object t : clientes) {
+                                            salida233 += "" + clientes.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida233);
+                                    }
                                     break;
                                 case 6:
                                     System.out.println("PRODUCTOS!!!!");
@@ -161,6 +213,38 @@ public class Lab3_LuisFlores_JesusMeraz {
                                         salida3 += "" + productos.indexOf(t) + "- " + t + "\n";
                                     }
                                     System.out.println(salida3);
+                                    System.out.println("");
+                                    System.out.println("Escoja Listado por Separado: ");
+                                    System.out.println("1. ropas");
+                                    System.out.println("2. juguetes");
+                                    System.out.println("3. Comida");
+
+                                    System.out.println("Escoja Opcion: ");
+                                    int oo2 = leer.nextInt();
+                                    if (oo2 == 1) {
+                                        System.out.println("ROPA!!!!");
+                                        String salida9 = "";
+                                        for (Object t : ropa) {
+                                            salida9 += "" + ropa.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida9);
+                                    }
+                                    if (oo2 == 2) {
+                                        System.out.println("JUGUETES!!!!");
+                                        String salida99 = "";
+                                        for (Object t : juguetes) {
+                                            salida99 += "" + juguetes.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida99);
+                                    }
+                                    if (oo2 == 3) {
+                                        System.out.println("COMIDA!!!!");
+                                        String salida999 = "";
+                                        for (Object t : comida) {
+                                            salida999 += "" + comida.indexOf(t) + "- " + t + "\n";
+                                        }
+                                        System.out.println(salida999);
+                                    }
                                     break;
                                 case 7:
                                     int o7 = 0;
@@ -225,15 +309,24 @@ public class Lab3_LuisFlores_JesusMeraz {
 
                                                 break;
                                             case 2:
-
+                                                Modjuguetes();
                                                 break;
                                             case 3:
-
+                                                Modropa();
                                                 break;
 
                                         }
                                     }
                                     break;
+                                case 10:
+                                    EliminoLocal();
+                                break;
+                                case 11:
+                                    EliminarPers();
+                                break;
+                                case 12:
+                                    EliminoProductos();
+                                break;
                             }
 
                         }
@@ -543,7 +636,7 @@ public class Lab3_LuisFlores_JesusMeraz {
     public static void ModQ() {
         //public void Quisco2(String nombre_tienda, Ropa ropa, Juguetes juguetes) 
         if (quisco.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hay ");
             return;
         }
 
@@ -586,7 +679,7 @@ public class Lab3_LuisFlores_JesusMeraz {
     public static void ModR() {
         // public void  act(Empleados empleado1, Empleados empleado2, Empleados empleado3, Empleados empleado4
         if (restaurantes.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hay");
             return;
         }
 
@@ -668,7 +761,7 @@ public class Lab3_LuisFlores_JesusMeraz {
     public static void Mode() {
         // public void  actEmpleados(String horario, int productos) {
         if (empleados.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hay");
             return;
         }
 
@@ -693,7 +786,7 @@ public class Lab3_LuisFlores_JesusMeraz {
     public static void Modc() {
         //public void act(double dinero) {
         if (clientes.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hays");
             return;
         }
 
@@ -716,7 +809,7 @@ public class Lab3_LuisFlores_JesusMeraz {
 
     public static void ModComida() {
         if (comida.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hay");
             return;
         }
 
@@ -739,9 +832,9 @@ public class Lab3_LuisFlores_JesusMeraz {
         System.out.println(comida);
     }
 
-    public static void ModJuguete() {
+    public static void Modjuguetes() {
         if (juguetes.isEmpty()) {
-            System.out.println("No hay jugadores");
+            System.out.println("No hay");
             return;
         }
 
@@ -756,5 +849,93 @@ public class Lab3_LuisFlores_JesusMeraz {
         } while (indice < 0 || indice >= juguetes.size());
         System.out.println("Ingrese nuva descripcion: ");
         String c = leer.next();
+        juguetes.get(indice).act(c);
+        System.out.println("NUEVO");
+        System.out.println(juguetes);
+    }
+
+    public static void Modropa() {
+        // public void Actualizar(String tipo, String talla){
+        if (ropa.isEmpty()) {
+            System.out.println("No hay ");
+            return;
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("MODIFICAR!");
+
+        int indice;
+
+        do {
+            System.out.println("->Ingrese posicion a modificar: ");
+            indice = sc.nextInt();
+        } while (indice < 0 || indice >= ropa.size());
+        System.out.println("Ingrese Nuevo tipo ropa: ");
+        String t = leer.next();
+        System.out.println("Ingrese Nueva Talla");
+        String n = leer.next();
+        ropa.get(indice).Actualizar(t, n);
+        System.out.println("Nuevo");
+        System.out.println(ropa);
+    }
+    public static void EliminoLocal(){
+         if (locales.isEmpty()) {
+            System.out.println("No hay ");
+            return;
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ELIMINAR !");
+
+        int indice;
+        do {
+            System.out.println("->Ingrese posicion a eliminar: ");
+            indice = sc.nextInt();
+        } while (indice < 0 || indice >= locales.size());
+
+        locales.remove(indice);
+
+        System.out.println("ELIMINADO!");
+    }
+    public static void EliminoProductos(){
+         if (productos.isEmpty()) {
+            System.out.println("No hay ");    
+            return;
+        }
+
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("ELIMINAR !");
+        
+
+        int indice;
+        do{
+            System.out.println("->Ingrese posicion a eliminar: ");
+            indice = sc.nextInt();
+        }while(indice < 0 || indice >= locales.size());
+        
+        productos.remove(indice);
+
+        System.out.println("ELIMINADO!");
+    
+    }
+    public static void EliminarPers(){
+         if (personas.isEmpty()) {
+            System.out.println("No hay ");    
+            return;
+        }
+
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("ELIMINAR !");
+        
+
+        int indice;
+        do{
+            System.out.println("->Ingrese posicion a eliminar: ");
+            indice = sc.nextInt();
+        }while(indice < 0 || indice >= locales.size());
+        
+        personas.remove(indice);
+
+        System.out.println("ELIMINADO!");
     }
 }
