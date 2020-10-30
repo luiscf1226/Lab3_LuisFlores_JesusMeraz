@@ -332,7 +332,11 @@ public class Lab3_LuisFlores_JesusMeraz {
                         }
                     }
                 case 2:
-                    System.out.println("Bienvenido Usuario");
+                    System.out.println("1. login");
+                    System.out.println("2. register");
+                    System.out.println("elija una opcion: ");
+                    int option = leer.nextInt();
+                    
                     break;
             }// LOGIN JESUS USUARIO
 
