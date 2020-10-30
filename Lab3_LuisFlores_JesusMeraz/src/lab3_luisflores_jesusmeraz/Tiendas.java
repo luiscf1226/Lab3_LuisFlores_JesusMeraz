@@ -24,6 +24,12 @@ public class Tiendas extends Locales {
         this.juguetes = juguetes;
         
     }
+     public void  Tiendas(Ropa ropa, Juguetes juguetes) {
+        
+        this.ropa = ropa;
+        this.juguetes = juguetes;
+        
+    }
 
     public Ropa getRopa() {
         return ropa;

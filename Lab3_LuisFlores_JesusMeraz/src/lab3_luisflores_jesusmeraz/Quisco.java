@@ -19,6 +19,13 @@ public class Quisco extends Locales {
         this.juguetes = juguetes;
         
     }
+       public void Quisco2(String nombre_tienda, Ropa ropa, Juguetes juguetes) {
+        
+        this.nombre_tienda = nombre_tienda;
+        this.ropa = ropa;
+        this.juguetes = juguetes;
+        
+    }
 
     public String getNombre_tienda() {
         return nombre_tienda;

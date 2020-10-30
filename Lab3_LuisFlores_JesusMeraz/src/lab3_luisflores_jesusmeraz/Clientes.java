@@ -23,6 +23,10 @@ public class Clientes extends Personas{
         super(id, username, contra, correo, nombre);
         this.dinero = dinero;
     }
+    public void act(double dinero) {
+        
+        this.dinero = dinero;
+    }
 
     public double getDinero() {
         return dinero;

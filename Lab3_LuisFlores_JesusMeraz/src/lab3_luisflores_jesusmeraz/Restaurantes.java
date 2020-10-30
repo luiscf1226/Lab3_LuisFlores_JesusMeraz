@@ -29,7 +29,13 @@ public class Restaurantes extends Locales {
         this.empleado3 = empleado3;
         this.empleado4 = empleado4;
     }
-
+    public void  act(Empleados empleado1, Empleados empleado2, Empleados empleado3, Empleados empleado4) {
+        
+        this.empleado1 = empleado1;
+        this.empleado2 = empleado2;
+        this.empleado3 = empleado3;
+        this.empleado4 = empleado4;
+    }
     public Empleados getEmpleado1() {
         return empleado1;
     }

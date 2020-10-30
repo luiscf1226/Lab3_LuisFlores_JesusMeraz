@@ -15,6 +15,11 @@ public class Comida extends Productos{
         this.fecha = fecha;
         this.tipo_productos = tipo_productos;
     }
+    public void Comida2(String fecha, String tipo_productos) {
+        
+        this.fecha = fecha;
+        this.tipo_productos = tipo_productos;
+    }
 
     public String getFecha() {
         return fecha;

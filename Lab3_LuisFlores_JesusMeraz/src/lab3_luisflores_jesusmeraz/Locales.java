@@ -17,7 +17,10 @@ public class Locales {
         this.nombre = nombre;
         this.gerente = gerente;
     }
-
+    public void Act (String nombre, String gerente) {
+        this.nombre = nombre;
+        this.gerente = gerente;
+    }
     public String getNombre() {
         return nombre;
     }

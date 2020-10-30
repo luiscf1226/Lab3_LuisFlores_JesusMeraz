@@ -22,6 +22,11 @@ public class Productos {
         this.nombre = nombre;
         this.precio = precio;
     }
+    public void Actualizar(String descripcion, String nombre, int precio){
+         this.descripcion = descripcion;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 
     public String getDescripcion() {
         return descripcion;

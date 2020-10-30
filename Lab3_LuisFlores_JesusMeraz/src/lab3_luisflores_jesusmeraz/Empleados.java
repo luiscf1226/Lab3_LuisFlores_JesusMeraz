@@ -22,6 +22,11 @@ public class Empleados extends Personas {
         this.horario = horario;
         this.productos = productos;
     }
+      public void  actEmpleados(String horario, int productos) {
+        
+        this.horario = horario;
+        this.productos = productos;
+    }
 
     public Empleados(String horario, int productos) {
         this.horario = horario;

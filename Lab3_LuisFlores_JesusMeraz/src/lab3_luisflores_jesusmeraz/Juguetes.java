@@ -21,6 +21,10 @@ public class Juguetes extends Productos {
         super(descripcion, nombre, precio);
         this.descripcion2 = descripcion;
     }
+     public void act(String descripcion2) {
+      
+        this.descripcion2 = descripcion2;
+    }
 
     public String getDescripcion2() {
         return descripcion2;
