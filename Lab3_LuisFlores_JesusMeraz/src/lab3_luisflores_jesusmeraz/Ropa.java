@@ -16,12 +16,18 @@ public class Ropa extends Productos {
     public Ropa() {
         super();
     }
-
+     public void Actualizar(String tipo, String talla){
+        
+        this.tipo = tipo;
+        this.talla = talla;
+    
+    }
     public Ropa(String tipo, String talla, String descripcion, String nombre, int precio) {
         super(descripcion, nombre, precio);
         this.tipo = tipo;
         this.talla = talla;
     }
+   
 
     public String getTipo() {
         return tipo;

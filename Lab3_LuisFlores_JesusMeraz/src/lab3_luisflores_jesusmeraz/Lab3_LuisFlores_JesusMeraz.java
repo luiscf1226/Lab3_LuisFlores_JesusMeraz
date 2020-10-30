@@ -98,14 +98,14 @@ public class Lab3_LuisFlores_JesusMeraz {
                                         System.out.println("2. Crear Clientes");
                                         System.out.println("3. Salir");
                                         System.out.println("Escoja Opcion: ");
-                                        o1 = leer.nextInt();
+                                        o2= leer.nextInt();
                                         switch (o2) {
-                                            case 1: 
+                                            case 1:
                                                 CrearEmp();
-                                            break;
+                                                break;
                                             case 2:
                                                 CreaClientes();
-                                            break;
+                                                break;
 
                                         }
                                     }
@@ -121,18 +121,46 @@ public class Lab3_LuisFlores_JesusMeraz {
                                         System.out.println("Escoja Opcion: ");
                                         o3 = leer.nextInt();
                                         switch (o3) {
-                                            case 1: 
-                                                
-                                            break;
+                                            case 1:
+                                                CrearRopa();
+
+                                                break;
                                             case 2:
-                                                
-                                            break;
+                                                Crearjug();
+                                                break;
+                                            case 3:
+                                                CrearCom();
+                                                break;
 
                                         }
                                     }
+
+                                    break;
+                                case 4:
+                                  
+                                    System.out.println("LOCALES!!!!");
+                                    String salida = "";
+                                    for (Object t : locales) {
+                                        salida += "" + locales.indexOf(t) + "- " + t + "\n";
+                                    }
+                                    System.out.println(salida);
+                                    break;
+                                case 5:
+                                    System.out.println("PERSONAS!!!!");
+                                    String salida2= "";
+                                    for (Object t : personas) {
+                                        salida2 += "" + personas.indexOf(t) + "- " + t + "\n";
+                                    }
+                                    System.out.println(salida2);
                                     
                                 break;
-                                case 4:
+                                case 6:
+                                    System.out.println("PRODUCTOS!!!!");
+                                    String salida3= "";
+                                    for (Object t : productos) {
+                                        salida3 += "" + productos.indexOf(t) + "- " + t + "\n";
+                                    }
+                                    System.out.println(salida3);
                                 break;
                             }
 
@@ -298,51 +326,100 @@ public class Lab3_LuisFlores_JesusMeraz {
         //public Empleados(String horario, int productos, int id, String username, String contra, String correo, String nombre) 
         System.out.println("Creando Empleado...");
         System.out.println("Escriba Horario: ");
-        String horario=leer.nextLine();
-        horario=leer.nextLine();
+        String horario = leer.nextLine();
+        horario = leer.nextLine();
         System.out.println("Escriba Numero Cantidad Productos Vendidos: ");
-        int prod=leer.nextInt();
+        int prod = leer.nextInt();
         System.out.println(" ID Empleado: ");
-        int id=leer.nextInt();
+        int id = leer.nextInt();
         System.out.println(" Username: ");
-        String u=leer.next();
+        String u = leer.next();
         System.out.println(" Contrasena Empleado: ");
-        String c=leer.next();
+        String c = leer.next();
         System.out.println("Escriba su Correo: ");
-        String c1=leer.next();
+        String c1 = leer.next();
         System.out.println("Nombre Empleado: ");
-        String n=leer.next();
-        Empleados em= new Empleados(horario,prod,id,u,c,c1,n);
+        String n = leer.next();
+        Empleados em = new Empleados(horario, prod, id, u, c, c1, n);
         empleados.add(em);
         personas.add(em);
     }
-    public static void CreaClientes(){
+
+    public static void CreaClientes() {
         //public Clientes(double dinero, int id, String username, String contra, String correo, String nombre)
         System.out.println("Ingrese Dinero: ");
-        double d=leer.nextDouble();
-        if(d<0){
+        double d = leer.nextDouble();
+        if (d < 0) {
             System.out.println("Dinero INSUFICIENTE");
         }
         System.out.println("Ingrese ID Cliente: ");
-        int id=leer.nextInt();
+        int id = leer.nextInt();
         System.out.println("User Cliente: ");
-        String u=leer.next();
+        String u = leer.next();
         System.out.println("Contrasena Cliente:");
-        String co=leer.next();
+        String co = leer.next();
         System.out.println("Correo: ");
-        String coo=leer.next();
+        String coo = leer.next();
         System.out.println("Nombre Cliente: ");
-        String n2=leer.next();
-        Clientes c= new Clientes (d,id,u,co,coo,n2);
+        String n2 = leer.next();
+        Clientes c = new Clientes(d, id, u, co, coo, n2);
         // public Productos(String descripcion, String nombre, int precio)
         System.out.println("Ingrese Descripcion Producto: ");
-        String d2=leer.next();
+        String d2 = leer.next();
         System.out.println("Nombre Producto: ");
-        String n11=leer.next();
+        String n11 = leer.next();
         System.out.println("Precio Producto: ");
-        int p=leer.nextInt();
-        Productos client=new Productos(d2,n11,p);
+        int p = leer.nextInt();
+        Productos client = new Productos(d2, n11, p);
+        clientes.add(c);
+        personas.add(c);
         c.getProductos().add(client);//AGREGAMOS A LA LISTA PRODUCTOS DE EL CLIENTE
     }
-    public static void CrearRopa(){}
+
+    public static void CrearRopa() {
+        System.out.println(" Ingrese tipo de ropa: ");
+        String tipo = leer.next();
+        System.out.println("Ingrese su talla: ");
+        String talla = leer.next();
+        System.out.println("Ingrese Descripcion: ");
+        String descripcion = leer.next();
+        System.out.println("Nombre Ropa: ");
+        String nombre_ropa = leer.next();
+        System.out.println("Ingrese Precio: ");
+        int precio = leer.nextInt();
+        Ropa ropa1 = new Ropa(tipo, talla, descripcion, nombre_ropa, precio);//OBJETO ROPA
+        ropa.add(ropa1);
+        productos.add(ropa1);
+    }
+
+    public static void Crearjug() {
+        System.out.println("Ingrese Descripcion Producto: ");
+        String desc_prod = leer.next();
+        System.out.println("Ingrese Descripcion Juguete: ");
+        String descripcion2 = leer.next();
+        System.out.println("Ingrese Nombre Juguete: ");
+        String name_jug = leer.next();
+        System.out.println("Ingrese Precio: ");
+        int precio_jug = leer.nextInt();
+        Juguetes jug1 = new Juguetes(desc_prod, descripcion2, name_jug, precio_jug);//OBJETO JUGUETE
+        productos.add(jug1);
+        juguetes.add(jug1);
+    }
+
+    public static void CrearCom() {
+        //public Comida(String fecha, String tipo_productos, String descripcion, String nombre, int precio)
+        System.out.println("Fecha Comida: ");
+        String f = leer.next();
+        System.out.println("Tipo Comida: ");
+        String t = leer.next();
+        System.out.println("Descripcion: ");
+        String d = leer.next();
+        System.out.println("Nombre: ");
+        String n = leer.next();
+        System.out.println("Precio: ");
+        int p = leer.nextInt();
+        Comida c = new Comida(f, t, d, n, p);
+        productos.add(c);
+        comida.add(c);
+    }
 }
