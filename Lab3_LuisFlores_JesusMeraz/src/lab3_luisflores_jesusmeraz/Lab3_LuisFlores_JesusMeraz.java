@@ -360,13 +360,13 @@ public class Lab3_LuisFlores_JesusMeraz {
                                             System.out.println("Tienda: ");
                                             for (Object t : tiendas) {
                                                 System.out.println(tiendas.indexOf(t) + " = " + t);
-                                            }
+                                            }// fin for
                                             break;
                                         case 2:
                                             System.out.println("Producto: ");
                                             for (Object t : productos) {
                                                 System.out.println(productos.indexOf(t) + " = " + t);
-                                            }
+                                            }// fin for
                                             break;
                                         case 3:
                                             System.out.println("Comprar: ");
@@ -1009,4 +1009,5 @@ public class Lab3_LuisFlores_JesusMeraz {
 
         System.out.println("ELIMINADO!");
     }
+    public static final String ANSI_CYAN = "\u001B[36m";
 }
