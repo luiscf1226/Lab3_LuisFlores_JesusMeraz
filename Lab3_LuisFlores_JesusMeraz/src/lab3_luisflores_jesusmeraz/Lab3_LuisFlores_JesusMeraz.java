@@ -385,6 +385,7 @@ public class Lab3_LuisFlores_JesusMeraz {
                                                 int cambio = lps - prc;
                                                 System.out.println("Su cambio es: " + cambio);
                                                 System.out.println("Gracias por su compra");
+                                                
                                             }
                                             break;
                                         default:
