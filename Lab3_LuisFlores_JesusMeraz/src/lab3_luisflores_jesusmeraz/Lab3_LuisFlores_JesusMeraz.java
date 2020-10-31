@@ -21,6 +21,8 @@ public class Lab3_LuisFlores_JesusMeraz {
     static ArrayList<Comida> comida = new ArrayList();
 
     public static void main(String[] args) {
+        String passClient = "";
+        String nameClient = "";
         int opcion = 0;
         while (opcion != 3) {
             System.out.println("Recuerde...");
@@ -320,23 +322,86 @@ public class Lab3_LuisFlores_JesusMeraz {
                                     break;
                                 case 10:
                                     EliminoLocal();
-                                break;
+                                    break;
                                 case 11:
                                     EliminarPers();
-                                break;
+                                    break;
                                 case 12:
                                     EliminoProductos();
-                                break;
+                                    break;
                             }
 
                         }
                     }
                 case 2:
                     System.out.println("1. login");
-                    System.out.println("2. register");
+                    System.out.println("2. sign in");
                     System.out.println("elija una opcion: ");
                     int option = leer.nextInt();
-                    
+                    switch (option) {
+                        case 1:
+                            System.out.println("Ingrese Usuario: ");
+                            String client = leer.next();
+                            System.out.println("Ingrese password: ");
+                            String passclient = leer.next();
+                            if (client.equals(nameClient) && passclient.equals(passClient)) {
+                                signedInAdmin = true;
+                                System.out.println("Bienvenido " + client);
+                            } else {
+                                System.out.println("Incorrecto");
+                            }
+                            while (signedInAdmin) {
+                                int opc = 14;
+                                while (opc != 13) {
+                                    System.out.println("Elija una opcion: ");
+                                    int op1 = leer.nextInt();
+                                    switch (op1) {
+                                        case 1:
+                                            System.out.println("Tienda");
+                                            for (Object t : tiendas) {
+                                                System.out.println(tiendas.indexOf(t) + " = " + t);
+                                            }
+                                            break;
+                                        case 2:
+                                            System.out.println("Producto");
+                                            for (Object t : productos) {
+                                                System.out.println(productos.indexOf(t) + " = " + t);
+                                            }
+                                            break;
+                                        case 3:
+                                            System.out.println("Comprar: ");
+                                            System.out.println("Elija la posicion del producto a comprar: ");
+                                            int pos = leer.nextInt();
+                                            System.out.println("Ha elegido " + productos.get(pos));
+                                            int prc = productos.get(pos).getPrecio();
+                                            System.out.println("precio:  " + prc);
+                                            System.out.println("Ingrese dinero a pagar: ");
+                                            int lps = leer.nextInt();
+                                            if (lps < prc) {
+                                                System.out.println("Lo sentimos, dinero insuficiente");
+                                            } else if (lps == prc) {
+                                                System.out.println("Gracias por su compra");
+                                            } else if (lps > prc) {
+                                                int cambio = lps - prc;
+                                                System.out.println("Su cambio es: " + cambio);
+                                                System.out.println("Gracias por su compra");
+                                            }
+                                            break;
+                                        default:
+                                            System.out.println("Fuera de rango");
+                                    }
+                                }
+
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Ingrese nombre de usuario: ");
+                            nameClient = leer.next();
+                            System.out.println("Ingrese contraseña: ");
+                            passClient = leer.next();
+                            break;
+                    }
+
                     break;
             }// LOGIN JESUS USUARIO
 
@@ -882,8 +947,9 @@ public class Lab3_LuisFlores_JesusMeraz {
         System.out.println("Nuevo");
         System.out.println(ropa);
     }
-    public static void EliminoLocal(){
-         if (locales.isEmpty()) {
+
+    public static void EliminoLocal() {
+        if (locales.isEmpty()) {
             System.out.println("No hay ");
             return;
         }
@@ -901,43 +967,43 @@ public class Lab3_LuisFlores_JesusMeraz {
 
         System.out.println("ELIMINADO!");
     }
-    public static void EliminoProductos(){
-         if (productos.isEmpty()) {
-            System.out.println("No hay ");    
+
+    public static void EliminoProductos() {
+        if (productos.isEmpty()) {
+            System.out.println("No hay ");
             return;
         }
 
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("ELIMINAR !");
-        
 
         int indice;
-        do{
+        do {
             System.out.println("->Ingrese posicion a eliminar: ");
             indice = sc.nextInt();
-        }while(indice < 0 || indice >= productos.size());
-        
+        } while (indice < 0 || indice >= productos.size());
+
         productos.remove(indice);
 
         System.out.println("ELIMINADO!");
-    
+
     }
-    public static void EliminarPers(){
-         if (personas.isEmpty()) {
-            System.out.println("No hay ");    
+
+    public static void EliminarPers() {
+        if (personas.isEmpty()) {
+            System.out.println("No hay ");
             return;
         }
 
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("ELIMINAR !");
-        
 
         int indice;
-        do{
+        do {
             System.out.println("->Ingrese posicion a eliminar: ");
             indice = sc.nextInt();
-        }while(indice < 0 || indice >= locales.size());
-        
+        } while (indice < 0 || indice >= locales.size());
+
         personas.remove(indice);
 
         System.out.println("ELIMINADO!");
