@@ -357,13 +357,13 @@ public class Lab3_LuisFlores_JesusMeraz {
                                     int op1 = leer.nextInt();
                                     switch (op1) {
                                         case 1:
-                                            System.out.println("Tienda");
+                                            System.out.println("Tienda: ");
                                             for (Object t : tiendas) {
                                                 System.out.println(tiendas.indexOf(t) + " = " + t);
                                             }
                                             break;
                                         case 2:
-                                            System.out.println("Producto");
+                                            System.out.println("Producto: ");
                                             for (Object t : productos) {
                                                 System.out.println(productos.indexOf(t) + " = " + t);
                                             }
@@ -385,14 +385,14 @@ public class Lab3_LuisFlores_JesusMeraz {
                                                 int cambio = lps - prc;
                                                 System.out.println("Su cambio es: " + cambio);
                                                 System.out.println("Gracias por su compra");
-                                                
-                                            }
+                                            } else {
+                                                System.out.println("Fuera de rango ");
+                                            }// fin else
                                             break;
                                         default:
                                             System.out.println("Fuera de rango");
                                     }
                                 }
-
                             }
                             break;
                         case 2:
